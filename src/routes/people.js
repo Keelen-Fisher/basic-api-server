@@ -2,6 +2,7 @@
 
 const express = require('express');
 const { PeopleModel } = require('../models');
+
 const router = express.Router();
 
 router.post('/people', async(req, res, send) => {

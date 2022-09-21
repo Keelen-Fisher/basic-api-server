@@ -17,10 +17,6 @@ const sequelizeDatabase = new Sequelize(DATABASE_URL);
 // create PeopleModel with our Schema
 const PeopleModel = peopleSchema(sequelizeDatabase, DataTypes);
 
-// creates all associated tables 
-sequelizeDatabase.sync()
-  .then(() => console.log('Successful Connection!'))
-  .catch(err => console.error(err));
 
 // to run this after you have created the sync function -> node src/models/index.js
 

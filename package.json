@@ -10,7 +10,7 @@
     "sqlite3": "^5.1.1",
     "supertest": "^6.2.4"
   },
-  "name": "pg-models",
+  "name": "basic-api-server",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
@@ -21,16 +21,17 @@
     "test-watch": "jest --watchAll --verbose --coverage",
     "db:config": "sequelize init:config",
     "db:create": "sequelize db:create"
-},
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Keelen-Fisher/pg-models.git"
+    "url": "git+https://github.com/Keelen-Fisher/basic-api-server.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Keelen-Fisher/pg-models/issues"
+    "url": "https://github.com/Keelen-Fisher/basic-api-server.git/issues"
   },
-  "homepage": "https://github.com/Keelen-Fisher/pg-models#readme"
+  "homepage": "https://github.com/Keelen-Fisher/basic-api-server.git#readme",
+  "devDependencies": {}
 }
