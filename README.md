@@ -1,6 +1,5 @@
-# Lab - 03
+# Lab - 03 basic-api-server
 
-## pg-models
 
 ## Author: Keelen Fisher
 
@@ -51,9 +50,9 @@
 
 - [Github repo:](https://github.com/Keelen-Fisher/basic-api-server)
 
-- [Deployed Site:](https://dashboard.heroku.com/apps/keelen-basic-expr-server-prod/deploy/github)
+- [Deployed Site:]()
 
-- [PR From Github:](https://github.com/Keelen-Fisher/basic-express-server/pull/2)
+- [PR From Github:](https://github.com/Keelen-Fisher/basic-api-server/pull/2)
 
 #### UML
 
