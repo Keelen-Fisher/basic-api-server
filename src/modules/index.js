@@ -2,7 +2,9 @@
 
 require('dotenv').config();
 const { Sequelize, DataTypes } = require('sequelize');
-const peopleSchema = require('./');
+const peopleSchema = require('./person.schema');
+const foodSchema = require('./food.schema');
+const nintendoSchema = require('./nintendo.schema');
 
 //  'postgres://localhost:5432/api-app'
 // with password: 'postgres://username:password@localhost:5432/api-app'
@@ -17,7 +19,13 @@ const sequelizeDatabase = new Sequelize(DATABASE_URL);
 // create PeopleModel with our Schema
 const PeopleModel = peopleSchema(sequelizeDatabase, DataTypes);
 
+const foodModel = foodSchema(sequelizeDatabase, DataTypes);
+
+const nintendoModel = nintendoSchema(sequelizeDatabase, DataTypes);
+
+
+
 
 // to run this after you have created the sync function -> node src/models/index.js
 
-module.exports = { sequelizeDatabase, PeopleModel };
+module.exports = { sequelizeDatabase, PeopleModel, foodModel, nintendoModel };
