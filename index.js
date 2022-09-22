@@ -1,7 +1,7 @@
 'use strict';
 
 
-const { sequelizeDatabase, PeopleModel } = require('./src/models');
+const { sequelizeDatabase, PeopleModel } = require('./src/modules');
 const { start } = require('./src/server');
 
 // creates all associated tables 
