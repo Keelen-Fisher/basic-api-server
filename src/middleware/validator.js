@@ -3,12 +3,10 @@
 const fiveError = require('../error-handlers/500.js');
 
 const validator = (req, res, next) => {
-  let { name } = req.query;
+  let { name } = req.body;
   try {
     if(name) {
-      res.status(200).send({
-        name: name,
-      });
+      next();
     } else {
       fiveError();
     }
