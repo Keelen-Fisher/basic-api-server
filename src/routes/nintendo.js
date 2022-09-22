@@ -2,7 +2,7 @@
 
 const express = require('express');
 const { nintendoModel } = require('../modules');
-
+const validator = require('../middleware/validator');
 const router = express.Router();
 
 // Get all
@@ -25,7 +25,7 @@ router.get('/nintendo/:id', async (req, res) => {
 
 
 // Post one
-router.post('/nintendo', async(req, res, send) => {
+router.post('/nintendo', validator, async(req, res, send) => {
   console.log('req.body: ', req.body);
 
   const newNintendo = await nintendoModel.create(req.body);
