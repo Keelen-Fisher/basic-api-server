@@ -5,6 +5,8 @@ const { Sequelize, DataTypes } = require('sequelize');
 const peopleSchema = require('./person.schema');
 const foodSchema = require('./food.schema');
 const nintendoSchema = require('./nintendo.schema');
+// instantiate:
+// const ModelInterface = require(./modelInterface);
 
 //  'postgres://localhost:5432/api-app'
 // with password: 'postgres://username:password@localhost:5432/api-app'
@@ -28,4 +30,9 @@ const nintendoModel = nintendoSchema(sequelizeDatabase, DataTypes);
 
 // to run this after you have created the sync function -> node src/models/index.js
 
-module.exports = { sequelizeDatabase, PeopleModel, foodModel, nintendoModel };
+module.exports = { sequelizeDatabase, 
+  PeopleModel, 
+  foodModel, 
+  nintendoModel,
+  // foodInterface: new ModelInterface(each model above ex: foodModel)
+};

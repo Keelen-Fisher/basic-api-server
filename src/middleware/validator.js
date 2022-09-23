@@ -8,6 +8,7 @@ const validator = (req, res, next) => {
     if(name) {
       next();
     } else {
+      console.log('Testing testing I am here');
       fiveError();
     }
   } catch (error) {
