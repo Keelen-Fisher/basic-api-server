@@ -1,26 +1,26 @@
 'use strict';
 
 const express = require('express');
-const { foodModel } = require('../modules');
+const { foodModel } = require('../modules/index');
 //  const { foodInterface } = 
 const router = express.Router();
 
 // Get all
-router.get('/food', async(req, res) => {
+router.get('/food', async(req, res, send) => {
 
   const food = await foodModel.findAll();
-  res.status(200).json(food);
+  res.status(200).send(food);
 });
 
 
 // Get one
-router.get('/food/:id', async (req, res) => {
+router.get('/food/:id', async (req, res, send) => {
   const oneFood = await foodModel.findAll({
     where: {
       id: req.params.id,
     },
   });
-  res.status(200).json(oneFood);
+  res.status(200).send(oneFood);
 });
 
 
@@ -34,7 +34,7 @@ router.post('/food', async(req, res, send) => {
 
 
 // update one
-router.put('/food/:id', async (req, res) => {
+router.put('/food/:id', async (req, res, send) => {
   const updateFood = await foodModel.update(req.body, {
     where: {
       id: req.params.id,
@@ -44,7 +44,7 @@ router.put('/food/:id', async (req, res) => {
 } );
 
 // Delete One
-router.delete('/food/:id', async (req, res) => {
+router.delete('/food/:id', async (req, res, send) => {
   const deletedFood = await foodModel.destroy({
     where: {
       id: req.params.id,
